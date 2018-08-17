@@ -109,7 +109,7 @@ class Volunteer(models.Model):
         choices = districts,
     )
     name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=10)
+    phone = models.CharField(max_length=15)
     organisation = models.CharField(max_length=250, verbose_name="Organization (സംഘടന) / Institution")
     address = models.TextField()
     area = models.CharField(
@@ -130,7 +130,7 @@ class Contributor(models.Model):
         choices = districts,
     )
     name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=10)
+    phone = models.CharField(max_length=15)
     address = models.TextField()
     commodities = models.TextField(verbose_name="What you can contribute. ( സംഭാവന ചെയ്യാന്‍ ഉദ്ദേശിക്കുന്ന സാധനങ്ങള്‍ ) -- Eg: Shirts, torches etc ")
     status = models.CharField(
@@ -149,7 +149,7 @@ class DistrictManager(models.Model):
         choices = districts,
     )
     name = models.CharField(max_length=100)
-    phone = models.CharField(max_length=11)
+    phone = models.CharField(max_length=15)
     email = models.CharField(max_length=100)
 
     def __str__(self):
